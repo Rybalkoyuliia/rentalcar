@@ -4,6 +4,9 @@ import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 
+const redirectTo = sessionStorage.redirectTo;
+delete sessionStorage.redirectTo;
+
 createRoot(document.getElementById("root")).render(
   <BrowserRouter basename="/rentalcar">
     <StrictMode>
@@ -11,3 +14,7 @@ createRoot(document.getElementById("root")).render(
     </StrictMode>
   </BrowserRouter>
 );
+
+if (redirectTo) {
+  window.location.replace(redirectTo);
+}

@@ -13,11 +13,14 @@
     <title>Rental Car</title>
     <script type="text/javascript">
       if (
-        !location.pathname.startsWith("/rentalcar/index.html") &&
-        location.pathname !== "/rentalcar/"
+        !window.location.pathname.startsWith("/rentalcar") &&
+        window.location.pathname !== "/"
       ) {
         sessionStorage.redirectTo =
-          location.pathname + location.search + location.hash;
+          window.location.pathname +
+          window.location.search +
+          window.location.hash;
+        window.location.replace("/rentalcar/");
       }
     </script>
   </head>

@@ -4,15 +4,12 @@
     <meta charset="utf-8" />
     <title>Redirecting...</title>
     <script type="text/javascript">
-      var redirectTo = sessionStorage.redirectTo;
-      sessionStorage.removeItem("redirectTo");
-
-      if (redirectTo) {
-        window.location.replace("/rentalcar/" + redirectTo.replace(/^\/+/, ""));
-      } else {
-        window.location.replace("/rentalcar/");
-      }
+      var path = window.location.pathname;
+      var newPath = "/rentalcar" + path;
+      window.location.replace(newPath);
     </script>
   </head>
-  <body></body>
+  <body>
+    <p>Redirecting...</p>
+  </body>
 </html>
