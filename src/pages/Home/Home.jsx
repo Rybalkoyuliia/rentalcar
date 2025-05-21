@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "../../components/Button/Button";
 import {
   FrontContainer,
   MainContainer,
@@ -7,6 +6,7 @@ import {
   Title,
   TitleContainer,
 } from "./Home.styled";
+import { Button } from "../../components/Button/Button";
 
 const Home = () => {
   return (

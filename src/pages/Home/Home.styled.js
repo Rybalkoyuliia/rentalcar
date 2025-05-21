@@ -3,8 +3,6 @@ import backgroundImg from "../../assets/TitleVehicle.png";
 
 export const MainContainer = styled.div`
   min-height: 100vh;
-  padding-top: 60px;
-  padding-bottom: 60px;
 
   background-image: url(${backgroundImg});
   background-size: cover;

@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/rentalcar",
+  base: "/rentalcar/",
   build: {
     sourcemap: true,
   },

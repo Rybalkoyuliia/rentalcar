@@ -7,5 +7,5 @@ export const Header = styled.header`
   right: 0;
   background-color: var(--badges);
   z-index: 1000;
-  padding: 30px 120px;
+  padding: 24px 120px;
 `;
