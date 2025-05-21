@@ -11,18 +11,6 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rental Car</title>
-    <script type="text/javascript">
-      if (
-        !window.location.pathname.startsWith("/rentalcar") &&
-        window.location.pathname !== "/"
-      ) {
-        sessionStorage.redirectTo =
-          window.location.pathname +
-          window.location.search +
-          window.location.hash;
-        window.location.replace("/rentalcar/");
-      }
-    </script>
   </head>
   <body>
     <div id="root"></div>
