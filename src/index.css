@@ -1,0 +1,95 @@
+:root {
+  --main: #101828;
+  --gray: #8e929a;
+  --gray-light: #dadde1;
+  --badges: #f2f4f7;
+  --inputs: #f7f7f7;
+  --button: #3470ff;
+  --button-hover: #0b44cd;
+  --white: #ffffff;
+
+  --font: "Manrope", sans-serif;
+
+  --font-main-size: 16px;
+  --font-small-size: 12px;
+
+  --font-main-weight: 500;
+  --font-boolen-weight: 600;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: var(--font);
+  font-size: var(--font-main);
+  font-weight: var(--font-main-weight);
+  background-color: var(--white);
+  color: var(--main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--button);
+  outline-offset: 2px;
+}
+
+::selection {
+  background-color: var(--button);
+  color: var(--white);
+}
+
+body {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.active {
+  color: var(--button-hover);
+}
