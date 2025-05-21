@@ -2,14 +2,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>SPA Redirect</title>
+    <title>Redirecting...</title>
     <script type="text/javascript">
       var redirectTo = sessionStorage.redirectTo;
       sessionStorage.removeItem("redirectTo");
+
       if (redirectTo) {
-        window.location = redirectTo;
+        window.location.replace("/rentalcar/" + redirectTo.replace(/^\/+/, ""));
       } else {
-        window.location = "/";
+        window.location.replace("/rentalcar/");
       }
     </script>
   </head>
