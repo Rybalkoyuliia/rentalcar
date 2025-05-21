@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>SPA Redirect</title>
+    <script type="text/javascript">
+      var redirectTo = sessionStorage.redirectTo;
+      sessionStorage.removeItem("redirectTo");
+      if (redirectTo) {
+        window.location = redirectTo;
+      } else {
+        window.location = "/";
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
