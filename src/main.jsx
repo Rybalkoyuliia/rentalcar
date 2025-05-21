@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 
 createRoot(document.getElementById("root")).render(
-  <BrowserRouter basename="/rentalcar">
+  <BrowserRouter basename="/rentalcar/">
     <StrictMode>
       <App />
     </StrictMode>
