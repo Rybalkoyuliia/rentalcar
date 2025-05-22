@@ -44,7 +44,6 @@ video,
 canvas,
 svg {
   display: block;
-  max-width: 100%;
   height: auto;
 }
 
@@ -88,6 +87,10 @@ ol {
 body {
   font-size: 16px;
   font-weight: 400;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 124px;
 }
 
 .active {

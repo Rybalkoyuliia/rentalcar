@@ -11,6 +11,7 @@ export const StyledImgWrapper = styled.div`
   overflow: hidden;
   img {
     object-fit: contain;
+    max-height: 100%;
   }
 `;
 export const Heart = styled.button`

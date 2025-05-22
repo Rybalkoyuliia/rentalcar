@@ -1,7 +1,12 @@
 import React from "react";
+import { StyledLoadMore, StyledLoadMoreContainer } from "./LoadMore.styled";
 
 const LoadMore = () => {
-  return <button>Load more</button>;
+  return (
+    <StyledLoadMoreContainer>
+      <StyledLoadMore>Load more</StyledLoadMore>
+    </StyledLoadMoreContainer>
+  );
 };
 
 export default LoadMore;

@@ -1,5 +1,4 @@
 import React from "react";
-import img from "../../assets/image 1.png";
 import { Button } from "../Button/Button";
 import heart from "../../assets/Heart.svg";
 import {
@@ -11,30 +10,41 @@ import {
   Heart,
 } from "./VehicleItem.styled";
 
-const VehicleItem = () => {
+const VehicleItem = ({
+  img,
+  brand,
+  model,
+  year,
+  rentalPrice,
+  address,
+  rentalCompany,
+  type,
+  mileage,
+}) => {
+  const addressParts = address.split(",").map((part) => part.trim());
   return (
     <StyledVehicleItem>
       <StyledImgWrapper>
-        <img src={img} alt="Vehicle" />
+        <img src={img} alt={`${brand} ${model} ${year}`} />
       </StyledImgWrapper>
       <Heart>
         <img src={heart} alt="heart icon" />
       </Heart>
       <StyledTitleWrapper>
         <h4>
-          Buick <span>Enclave</span>, 2008
+          {brand} <span>{model}</span>, {year}
         </h4>
-        <p>40$</p>
+        <p>{rentalPrice}$</p>
       </StyledTitleWrapper>
 
       <StyledDescList>
-        <li>Kiev</li>
-        <li>Ukraine</li>
-        <li>Luxury Car Rentals</li>
+        <li>{addressParts[1]}</li>
+        <li>{addressParts[2]}</li>
+        <li>{rentalCompany}</li>
       </StyledDescList>
       <StyledDescListLower>
-        <li>Suv</li>
-        <li>9 582 km</li>
+        <li>{type}</li>
+        <li>{mileage.toLocaleString()} km</li>
       </StyledDescListLower>
 
       <Button text="Read more" />
