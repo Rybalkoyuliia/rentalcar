@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { carsApi } from "../axiosConfig/carsApi";
+import { carsApi } from "../services/carsApi";
 
 export const fetchCarsThunk = createAsyncThunk(
   "fetchCars",
