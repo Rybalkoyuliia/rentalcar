@@ -1,10 +1,17 @@
 import React from "react";
 import { StyledLoadMore, StyledLoadMoreContainer } from "./LoadMore.styled";
 
-const LoadMore = () => {
+const LoadMore = ({ loadMore }) => {
   return (
     <StyledLoadMoreContainer>
-      <StyledLoadMore>Load more</StyledLoadMore>
+      <StyledLoadMore
+        onClick={(e) => {
+          e.preventDefault();
+          loadMore();
+        }}
+      >
+        Load more
+      </StyledLoadMore>
     </StyledLoadMoreContainer>
   );
 };

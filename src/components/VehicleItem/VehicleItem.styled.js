@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export const StyledVehicleItem = styled.li`
   width: 276px;
@@ -6,17 +7,41 @@ export const StyledVehicleItem = styled.li`
 `;
 
 export const StyledImgWrapper = styled.div`
+  position: relative;
+
   height: 268px;
   border-radius: 12px;
   overflow: hidden;
-  img {
-    object-fit: contain;
-    max-height: 100%;
+  .image-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(
+      to bottom,
+      rgba(18, 20, 23, 0.5) 0%,
+      rgba(18, 20, 23, 0) 100%
+    );
+    pointer-events: none;
   }
 `;
+
+export const StyledLazyImage = styled(LazyLoadImage)`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+`;
+
 export const Heart = styled.button`
   background-color: transparent;
-  img {
+  svg {
     position: absolute;
     top: 16px;
     right: 16px;
@@ -28,8 +53,14 @@ export const StyledTitleWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   h4 {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
     color: var(--main);
     font-weight: var(--font-main-weight);
+
     span {
       color: var(--button);
     }

@@ -14,7 +14,9 @@ const Navigation = () => {
           <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <NavLink to="catalog">Catalog</NavLink>
+          <NavLink to="catalog" end>
+            Catalog
+          </NavLink>
         </li>
       </NavList>
     </StyledNavigation>
