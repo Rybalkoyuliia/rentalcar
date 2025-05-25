@@ -47,10 +47,10 @@ const VehicleItem = (props) => {
       <StyledImgWrapper>
         <StyledLazyImage
           src={img}
-          effect="blur"
-          wrapperClassName="image-wrapper"
-          alt={`${brand} ${model} ${year}`}
           placeholder={<LoaderImg />}
+          // effect="blur"
+          // wrapperClassName="image-wrapper"
+          alt={`${brand} ${model} ${year}`}
         />
       </StyledImgWrapper>
       <Heart onClick={toggleFavoriteHandler} style={{ cursor: "pointer" }}>

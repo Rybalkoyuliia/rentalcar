@@ -15,6 +15,7 @@ export const StyledImgWrapper = styled.div`
   .image-wrapper {
     width: 100%;
     height: 100%;
+    position: relative;
   }
   &::after {
     content: "";
@@ -36,6 +37,7 @@ export const StyledLazyImage = styled(LazyLoadImage)`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: relative;
 `;
 
 export const Heart = styled.button`
