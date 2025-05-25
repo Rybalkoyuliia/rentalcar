@@ -15,6 +15,7 @@ import { addressParts } from "../../helper/addressParts";
 import { useDispatch, useSelector } from "react-redux";
 import { selectFavorites, toggleFavorite } from "../../redux/slice";
 import sprite from "/sprite.svg";
+import LoaderImg from "../LoaderImg/LoaderImg";
 
 const VehicleItem = (props) => {
   const {
@@ -49,6 +50,7 @@ const VehicleItem = (props) => {
           effect="blur"
           wrapperClassName="image-wrapper"
           alt={`${brand} ${model} ${year}`}
+          placeholder={<LoaderImg />}
         />
       </StyledImgWrapper>
       <Heart onClick={toggleFavoriteHandler} style={{ cursor: "pointer" }}>

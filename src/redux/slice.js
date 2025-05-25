@@ -37,6 +37,14 @@ const slice = createSlice({
         state.favorites.splice(index, 1);
       }
     },
+    resetFilters: (state) => {
+      state.filters = {
+        brand: "",
+        rentalPrice: "",
+        minMileage: "",
+        maxMileage: "",
+      };
+    },
   },
   extraReducers: (builder) =>
     builder
@@ -63,8 +71,14 @@ const slice = createSlice({
       .addCase(fetchBrandsThunk.fulfilled, (state, { payload }) => {
         state.brands = payload;
       })
+      .addCase(fetchCarByIdThunk.pending, (state) => {
+        state.loading = true;
+      })
       .addCase(fetchCarByIdThunk.fulfilled, (state, { payload }) => {
         state.car = payload;
+      })
+      .addCase(fetchCarByIdThunk.rejected, (state, { payload }) => {
+        state.isError = payload;
       }),
   selectors: {
     selectCars: (state) => state.cars,
@@ -79,7 +93,7 @@ const slice = createSlice({
 });
 
 export const rentalcarReducer = slice.reducer;
-export const { filterCars, toggleFavorite } = slice.actions;
+export const { filterCars, toggleFavorite, resetFilters } = slice.actions;
 export const {
   selectCars,
   selectLoading,

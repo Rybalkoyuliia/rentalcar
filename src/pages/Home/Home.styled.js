@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import backgroundImg from "../../assets/TitleVehicle.png";
+import { media } from "../../helper/breakPoints.styled";
 
 export const MainContainer = styled.div`
   height: 100vh;
@@ -20,6 +21,9 @@ export const TitleContainer = styled.div`
   align-items: center;
   gap: 40px;
   margin-bottom: 60px;
+  ${media.mobile} {
+    margin-bottom: 20px;
+  }
 `;
 
 export const FrontContainer = styled.div`

@@ -80,7 +80,7 @@ export const StyledListsWrapper = styled.div`
     gap: 40px;
   }
   ${media.mobile} {
-    gap: 40px;
+    gap: 0px;
   }
   h3 {
     font-size: clamp(16px, 1vw, 20px);
@@ -104,6 +104,10 @@ export const StyledListsWrapper = styled.div`
     }
     ${media.tablet} {
       gap: 4px;
+    }
+    ${media.mobile} {
+      gap: 4px;
+      margin-bottom: 40px;
     }
   }
 `;

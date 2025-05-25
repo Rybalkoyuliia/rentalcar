@@ -18,8 +18,8 @@ function App() {
             <Route index element={<Home />} />
             <Route path="catalog" element={<Catalog />} />
             <Route path="catalog/:id" element={<CarDetail />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
-          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
       <ToastContainer />

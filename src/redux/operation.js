@@ -49,6 +49,12 @@ export const fetchCarByIdThunk = createAsyncThunk(
       const { data } = await carsApi.get(`/cars/${id}`);
       return data;
     } catch (error) {
+      if (error.response && error.response.status === 404) {
+        return thunkAPI.rejectWithValue({
+          status: 404,
+          message: "Car not found",
+        });
+      }
       return thunkAPI.rejectWithValue(error.message);
     }
   }

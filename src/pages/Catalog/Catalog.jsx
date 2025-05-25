@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchBrandsThunk, fetchCarsThunk } from "../../redux/operation";
 import VehicleList from "../../components/VehicleList/VehicleList";
 import {
+  resetFilters,
   selectFilters,
   selectLoading,
   selectTotalPages,
@@ -20,6 +21,11 @@ const Catalog = () => {
   const filters = useSelector(selectFilters);
 
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(resetFilters());
+    setPage(1);
+  }, []);
 
   useEffect(() => {
     setPage(1);

@@ -36,7 +36,6 @@ export const StyledLazyImage = styled(LazyLoadImage)`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 `;
 
 export const Heart = styled.button`

@@ -7,6 +7,7 @@ export const StyledImgWrapper = styled.div`
   height: auto;
   overflow: hidden;
   border-radius: 10px;
+  background-color: var(--gray-light);
 
   .car-image {
     width: 100%;

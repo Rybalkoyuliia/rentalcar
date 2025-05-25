@@ -19,5 +19,6 @@ export const PageContainer = styled.div`
     margin-top: 64px;
     padding: 0 22px;
     gap: 20px;
+    margin-bottom: 0px;
   }
 `;
