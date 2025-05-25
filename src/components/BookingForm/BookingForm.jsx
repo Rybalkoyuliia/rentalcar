@@ -9,6 +9,7 @@ import {
   StyledForm,
   StyledSendBtn,
 } from "./BookingForm.styled";
+import { format } from "date-fns";
 
 const BookingForm = () => {
   const {
@@ -35,7 +36,9 @@ const BookingForm = () => {
 
   const submit = (data) => {
     if (!data.date) {
-      data.date = new Date();
+      data.date = format(new Date(), "dd.MM.yyyy");
+    } else {
+      data.date = format(new Date(data.date), "dd.MM.yyyy");
     }
     console.log(data);
     toast.success("Your request has been sent");

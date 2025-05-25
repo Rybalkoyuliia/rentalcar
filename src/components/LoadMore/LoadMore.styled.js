@@ -5,8 +5,7 @@ export const StyledLoadMore = styled.button`
   padding: 12px 51px;
   border: 1px solid var(--button);
   border-radius: 12px;
-  &:hover,
-  &:focus {
+  &:hover {
     border: 1px solid var(--button-hover);
   }
 

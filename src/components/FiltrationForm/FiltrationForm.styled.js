@@ -18,6 +18,12 @@ export const StyledForm = styled.form`
     font-size: 12px;
   }
 
+  .adaptive-container {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+
   fieldset {
     border: none;
     display: flex;
@@ -27,6 +33,35 @@ export const StyledForm = styled.form`
       gap: 0;
       margin-top: 4px;
       line-height: 16px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 76px auto 50px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div {
+      gap: 4px;
+    }
+    .adaptive-container {
+      gap: 8px;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    margin: 56px auto 50px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div {
+      gap: 4px;
+    }
+    .adaptive-container {
+      flex-direction: column;
+      gap: 8px;
     }
   }
 `;
@@ -43,6 +78,16 @@ export const StyledInputFrom = styled.input`
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
   border-right: 1px solid var(--gray-light);
+  @media screen and (max-width: 768px) {
+    max-width: 205px;
+    padding: 11.5px 8px 11.5px 58px;
+  }
+
+  @media screen and (max-width: 360px) {
+    max-width: 100px;
+    padding: 11.5px 8px 11.5px 58px;
+    font-size: 14px;
+  }
 `;
 
 export const StyledInputTo = styled.input`
@@ -56,6 +101,15 @@ export const StyledInputTo = styled.input`
   outline: none;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
+  @media screen and (max-width: 768px) {
+    max-width: 208px;
+    padding: 11.5px 8px 11.5px 40px;
+  }
+  @media screen and (max-width: 360px) {
+    max-width: 100px;
+    padding: 11.5px 0px 11.5px 40px;
+    font-size: 14px;
+  }
 `;
 
 export const StyledSubmitBtn = styled.button`
@@ -68,9 +122,12 @@ export const StyledSubmitBtn = styled.button`
   &:hover {
     background-color: var(--button-hover);
   }
-  &:focus,
   &:active {
     background-color: var(--main);
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 71%;
   }
 `;
 export const MileageWrapper = styled.div`

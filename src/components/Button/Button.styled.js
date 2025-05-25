@@ -18,9 +18,7 @@ export const StyledButton = styled(Link)`
   &:hover {
     background-color: var(--button-hover);
   }
-
-  &:active,
-  &:focus {
+  &:active {
     background-color: var(--main);
   }
 `;

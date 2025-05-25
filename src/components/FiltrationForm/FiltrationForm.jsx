@@ -40,46 +40,47 @@ const FiltrationForm = () => {
 
   return (
     <StyledForm onSubmit={handleSubmit(submit)}>
-      <div>
-        <label className="label">Car brand </label>
+      <div className="adaptive-container">
+        <div>
+          <label className="label">Car brand </label>
 
-        <Controller
-          name="brand"
-          control={control}
-          render={({ field }) => (
-            <Select
-              {...field}
-              value={field.value || null}
-              options={brandOptions}
-              placeholder="Choose a brand"
-              styles={customStyles}
-              isSearchable={false}
-              components={{ DropdownIndicator }}
-            />
-          )}
-        />
+          <Controller
+            name="brand"
+            control={control}
+            render={({ field }) => (
+              <Select
+                {...field}
+                value={field.value || null}
+                options={brandOptions}
+                placeholder="Choose a brand"
+                styles={customStyles}
+                isSearchable={false}
+                components={{ DropdownIndicator }}
+              />
+            )}
+          />
+        </div>
+
+        <div>
+          <label className="label">Price / 1 hour </label>
+
+          <Controller
+            name="price"
+            control={control}
+            render={({ field }) => (
+              <Select
+                {...field}
+                value={field.value || null}
+                options={priceOptions}
+                placeholder="Choose a price"
+                styles={customStyles}
+                isSearchable={false}
+                components={{ DropdownIndicator }}
+              />
+            )}
+          />
+        </div>
       </div>
-
-      <div>
-        <label className="label">Price / 1 hour </label>
-
-        <Controller
-          name="price"
-          control={control}
-          render={({ field }) => (
-            <Select
-              {...field}
-              value={field.value || null}
-              options={priceOptions}
-              placeholder="Choose a price"
-              styles={customStyles}
-              isSearchable={false}
-              components={{ DropdownIndicator }}
-            />
-          )}
-        />
-      </div>
-
       <div>
         <fieldset>
           <legend className="label">Car mileage / km</legend>

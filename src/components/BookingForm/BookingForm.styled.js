@@ -2,13 +2,6 @@ import DatePicker from "react-datepicker";
 import styled, { createGlobalStyle } from "styled-components";
 import "react-datepicker/dist/react-datepicker.css";
 
-export const PageContainer = styled.div`
-  margin-top: 152px;
-  padding: 0 120px;
-  display: flex;
-  gap: 72px;
-`;
-
 export const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
@@ -19,17 +12,29 @@ export const StyledForm = styled.form`
   border: 1px solid var(--gray-light);
   border-radius: 10px;
   padding: 32px;
+
+  @media screen and (max-width: 768px) {
+    width: 325px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 275px;
+    padding: 14px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+    gap: 14px;
+  }
   .title_container {
     h3 {
       color: var(--main);
-      font-size: 20px;
+      font-size: clamp(14px, 5vw, 20px);
       font-weight: 600px;
       margin-bottom: 8px;
       line-height: 24px;
     }
     p {
       color: var(--gray);
-      font-size: 16px;
+      font-size: clamp(12px, 1.5vw, 16px);
       font-weight: 500px;
       line-height: 20px;
     }
@@ -39,12 +44,25 @@ export const StyledForm = styled.form`
     display: flex;
     flex-direction: column;
     gap: 16px;
+    @media screen and (max-width: 768px) {
+      gap: 8px;
+    }
     input {
       background-color: var(--inputs);
       border-radius: 12px;
       padding: 12px 20px;
       height: 48px;
       width: 576px;
+      @media screen and (max-width: 768px) {
+        width: 265px;
+        height: 36px;
+        padding: 8px 16px;
+      }
+      @media screen and (max-width: 320px) {
+        width: 245px;
+        height: 36px;
+        padding: 8px 16px;
+      }
     }
     textarea {
       background-color: var(--inputs);
@@ -52,6 +70,12 @@ export const StyledForm = styled.form`
       padding: 12px 20px;
       height: 88px;
       resize: none;
+      @media screen and (max-width: 768px) {
+        width: 265px;
+      }
+      @media screen and (max-width: 320px) {
+        width: 245px;
+      }
     }
   }
 `;
@@ -144,7 +168,6 @@ export const StyledSendBtn = styled.button`
   &:hover {
     background-color: var(--button-hover);
   }
-  &:focus,
   &:active {
     background-color: var(--main);
   }

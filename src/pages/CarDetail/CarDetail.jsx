@@ -25,13 +25,11 @@ const CarDetail = () => {
 
   return (
     <PageContainer>
-      {/* Left side */}
       <div>
         <DetailedImg car={car} />
         <BookingForm />
       </div>
 
-      {/* Right Side */}
       <InfoDetailes car={car} />
     </PageContainer>
   );

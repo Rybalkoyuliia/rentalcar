@@ -7,7 +7,7 @@ const Navigation = () => {
   return (
     <StyledNavigation>
       <Link to="/">
-        <img src={logo} alt="Rental Car Logo" width={120} />
+        <img src={logo} alt="Rental Car Logo" />
       </Link>
       <NavList>
         <li>
