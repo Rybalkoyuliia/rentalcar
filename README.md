@@ -1,4 +1,8 @@
-# 🚗 Rental Car
+<p align="center">
+<img src="./public/vite.svg" alt="Rental Car Logo" width="200" />
+</p>
+
+## 🚗 Rental Car
 
 **Rental Car** is a responsive web application for browsing and booking rental vehicles. It includes a smart filtering system, detailed car pages, booking form, and a favorites feature.
 
