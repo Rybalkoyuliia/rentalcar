@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media } from "../../helper/breakPoints.styled";
 
 export const Header = styled.header`
   position: fixed;
@@ -10,11 +11,11 @@ export const Header = styled.header`
   padding: 24px 120px;
   width: 100%;
 
-  @media screen and (max-width: 768px) {
+  ${media.tablet} {
     padding: 12px 60px;
   }
 
-  @media screen and (max-width: 320px) {
+  ${media.mobile} {
     padding: 6px 22px;
   }
 `;

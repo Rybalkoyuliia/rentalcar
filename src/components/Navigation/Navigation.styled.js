@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media } from "../../helper/breakPoints.styled";
 
 export const StyledNavigation = styled.nav`
   display: flex;
@@ -11,7 +12,7 @@ export const StyledNavigation = styled.nav`
     }
   }
 
-  @media screen and (max-width: 768px) {
+  ${media.tablet} {
     a {
       img {
         width: 100px;
@@ -19,7 +20,7 @@ export const StyledNavigation = styled.nav`
     }
   }
 
-  @media screen and (max-width: 320px) {
+  ${media.mobile} {
     justify-content: space-between;
 
     a {
@@ -36,10 +37,10 @@ export const NavList = styled.ul`
   gap: 32px;
   font-weight: 500;
   font-size: 16px;
-  @media screen and (max-width: 768px) {
+  ${media.tablet} {
     gap: 16px;
   }
-  @media screen and (max-width: 320px) {
+  ${media.mobile} {
     gap: 8px;
     justify-content: space-between;
   }

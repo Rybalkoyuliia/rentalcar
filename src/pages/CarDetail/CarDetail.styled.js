@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media } from "../../helper/breakPoints.styled";
 
 export const PageContainer = styled.div`
   margin-top: 152px;
@@ -6,14 +7,14 @@ export const PageContainer = styled.div`
   display: flex;
   gap: 72px;
 
-  @media screen and (max-width: 768px) {
+  ${media.tablet} {
     margin-top: 76px;
     padding: 0 60px;
     gap: 64px;
     margin-bottom: 60px;
   }
 
-  @media screen and (max-width: 320px) {
+  ${media.mobile} {
     flex-direction: column;
     margin-top: 64px;
     padding: 0 22px;

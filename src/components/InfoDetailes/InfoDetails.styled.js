@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media } from "../../helper/breakPoints.styled";
 
 export const StyledTitleWrapper = styled.div`
   display: flex;
@@ -30,7 +31,7 @@ export const StyledDescriptionWrapper = styled.div`
     line-height: 20px;
     font-size: clamp(12px, 1vw + 0.5rem, 16px);
   }
-  @media screen and (max-width: 768px) {
+  ${media.tablet} {
     flex-direction: column;
     margin-bottom: 14px;
     gap: 4px;
@@ -48,9 +49,12 @@ export const StyledPrice = styled.p`
   font-weight: 600;
   margin-bottom: 32px;
   line-height: 32px;
-  @media screen and (max-width: 768px) {
+  ${media.tablet} {
     flex-direction: column;
     margin-bottom: 14px;
+  }
+  ${media.mobile} {
+    margin-bottom: 10px;
   }
 `;
 
@@ -60,8 +64,11 @@ export const StyledDesc = styled.p`
   font-weight: 500;
   margin-bottom: 68px;
   line-height: 20px;
-  @media screen and (max-width: 768px) {
+  ${media.tablet} {
     margin-bottom: 40px;
+  }
+  ${media.mobile} {
+    margin-bottom: 20px;
   }
 `;
 
@@ -69,7 +76,10 @@ export const StyledListsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 110px;
-  @media screen and (max-width: 768px) {
+  ${media.tablet} {
+    gap: 40px;
+  }
+  ${media.mobile} {
     gap: 40px;
   }
   h3 {
@@ -77,7 +87,7 @@ export const StyledListsWrapper = styled.div`
     font-weight: 600;
     margin-bottom: 20px;
     line-height: 24px;
-    @media screen and (max-width: 768px) {
+    ${media.tablet} {
       margin-bottom: 12px;
     }
   }
@@ -92,7 +102,7 @@ export const StyledListsWrapper = styled.div`
       font-weight: 500;
       line-height: 20px;
     }
-    @media screen and (max-width: 768px) {
+    ${media.tablet} {
       gap: 4px;
     }
   }

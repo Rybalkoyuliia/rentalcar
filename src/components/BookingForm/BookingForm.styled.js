@@ -1,23 +1,24 @@
 import DatePicker from "react-datepicker";
 import styled, { createGlobalStyle } from "styled-components";
 import "react-datepicker/dist/react-datepicker.css";
+import { media } from "../../helper/breakPoints.styled";
 
 export const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   gap: 24px;
-  width: 640px;
+  width: 100%;
   margin-top: 40px;
   margin-bottom: 104px;
   border: 1px solid var(--gray-light);
   border-radius: 10px;
   padding: 32px;
 
-  @media screen and (max-width: 768px) {
-    width: 325px;
+  ${media.tablet} {
+    width: 100%;
   }
-  @media screen and (max-width: 768px) {
-    width: 275px;
+  ${media.mobile} {
+    width: 100%;
     padding: 14px;
     margin-bottom: 20px;
     margin-top: 20px;
@@ -27,14 +28,14 @@ export const StyledForm = styled.form`
   .title_container {
     h3 {
       color: var(--main);
-      font-size: clamp(14px, 5vw, 20px);
+      font-size: clamp(16px, 2.5vw, 20px);
       font-weight: 600px;
       margin-bottom: 8px;
       line-height: 24px;
     }
     p {
       color: var(--gray);
-      font-size: clamp(12px, 1.5vw, 16px);
+      font-size: clamp(12px, 2.5vw, 16px);
       font-weight: 500px;
       line-height: 20px;
     }
@@ -43,8 +44,9 @@ export const StyledForm = styled.form`
   .inputs_container {
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 16px;
-    @media screen and (max-width: 768px) {
+    ${media.tablet} {
       gap: 8px;
     }
     input {
@@ -52,14 +54,14 @@ export const StyledForm = styled.form`
       border-radius: 12px;
       padding: 12px 20px;
       height: 48px;
-      width: 576px;
-      @media screen and (max-width: 768px) {
-        width: 265px;
+      width: 100%;
+      ${media.tablet} {
+        width: 100%;
         height: 36px;
         padding: 8px 16px;
       }
-      @media screen and (max-width: 320px) {
-        width: 245px;
+      ${media.mobile} {
+        width: 100%;
         height: 36px;
         padding: 8px 16px;
       }
@@ -70,11 +72,11 @@ export const StyledForm = styled.form`
       padding: 12px 20px;
       height: 88px;
       resize: none;
-      @media screen and (max-width: 768px) {
-        width: 265px;
+      ${media.tablet} {
+        width: 100%;
       }
-      @media screen and (max-width: 320px) {
-        width: 245px;
+      ${media.mobile} {
+        width: 100%;
       }
     }
   }
@@ -93,6 +95,9 @@ export const StyledDatePicker = styled(DatePicker)`
 `;
 
 export const DatePickerStyles = createGlobalStyle`
+.react-datepicker-wrapper {
+  width: 100%;
+}
 
 .react-datepicker {
     font-family: var(--font-calendar);

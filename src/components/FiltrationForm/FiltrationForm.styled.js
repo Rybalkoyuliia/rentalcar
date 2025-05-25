@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media } from "../../helper/breakPoints.styled";
 
 export const StyledForm = styled.form`
   max-width: 924px;
@@ -36,7 +37,7 @@ export const StyledForm = styled.form`
     }
   }
 
-  @media screen and (max-width: 768px) {
+  ${media.tablet} {
     margin: 76px auto 50px;
     max-width: 90%;
     display: flex;
@@ -50,7 +51,7 @@ export const StyledForm = styled.form`
     }
   }
 
-  @media screen and (max-width: 360px) {
+  ${media.mobile} {
     margin: 56px auto 50px;
     max-width: 90%;
     display: flex;
@@ -78,12 +79,12 @@ export const StyledInputFrom = styled.input`
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
   border-right: 1px solid var(--gray-light);
-  @media screen and (max-width: 768px) {
+  ${media.tablet} {
     max-width: 205px;
     padding: 11.5px 8px 11.5px 58px;
   }
 
-  @media screen and (max-width: 360px) {
+  ${media.mobile} {
     max-width: 100px;
     padding: 11.5px 8px 11.5px 58px;
     font-size: 14px;
@@ -101,11 +102,11 @@ export const StyledInputTo = styled.input`
   outline: none;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
-  @media screen and (max-width: 768px) {
+  ${media.tablet} {
     max-width: 208px;
     padding: 11.5px 8px 11.5px 40px;
   }
-  @media screen and (max-width: 360px) {
+  ${media.mobile} {
     max-width: 100px;
     padding: 11.5px 0px 11.5px 40px;
     font-size: 14px;
@@ -126,8 +127,8 @@ export const StyledSubmitBtn = styled.button`
     background-color: var(--main);
   }
 
-  @media screen and (max-width: 768px) {
-    width: 71%;
+  ${media.tablet} {
+    width: 200px;
   }
 `;
 export const MileageWrapper = styled.div`

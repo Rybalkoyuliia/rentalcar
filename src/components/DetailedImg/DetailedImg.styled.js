@@ -1,26 +1,24 @@
 import styled from "styled-components";
+import { media } from "../../helper/breakPoints.styled";
 
 export const StyledImgWrapper = styled.div`
   width: 100%;
-  max-width: 640px;
   aspect-ratio: 5 / 4;
-  height: 100%;
-  max-height: 512px;
+  height: auto;
   overflow: hidden;
   border-radius: 10px;
+
   .car-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-  @media screen and (max-width: 768px) {
-    max-width: 325px;
-    max-height: 250px;
+  ${media.tablet} {
+    aspect-ratio: 4 / 3;
   }
 
-  @media screen and (max-width: 320px) {
-    width: 275px;
+  ${media.mobile} {
     aspect-ratio: 4 / 3;
   }
 `;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media } from "../../helper/breakPoints.styled";
 
 export const StyledList = styled.ul`
   display: grid;
@@ -6,10 +7,10 @@ export const StyledList = styled.ul`
   justify-items: center;
   gap: 48px 16px;
   margin-bottom: 124px;
-  @media screen and (max-width: 768px) {
+  ${media.tablet} {
     margin-bottom: 76px;
   }
-  @media screen and (max-width: 360px) {
+  ${media.mobile} {
     margin-bottom: 38px;
   }
 `;
