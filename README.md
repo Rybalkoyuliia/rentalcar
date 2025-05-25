@@ -140,6 +140,12 @@ This project is open-source and available under the [MIT License](./LICENSE).
 
 ---
 
+## 📊 Lighthouse Performance
+
+![Lighthouse performance score](./public/performance.png)
+
+---
+
 ## 👩‍💻 Author
 
 [Yuliia Rybalko](https://www.linkedin.com/in/yuliiarybalko?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BU5Scn79fSB2FHiIefBF6rw%3D%3D)
